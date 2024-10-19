@@ -1,0 +1,11 @@
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+
+# Environments
+.venv/
+
+# pyenv
+.python-version
+
+# VS Code files
+*.code-workspace
