@@ -1,10 +1,11 @@
-# Byte-compiled / optimized / DLL files
+# Python generated files
+__pycache__/
 *.py[cod]
 
-# Environments
+# Python virtual environments
 .venv/
 
-# pyenv
+# pyenv or uv generated files
 .python-version
 
 # VS Code files
