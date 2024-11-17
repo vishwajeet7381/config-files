@@ -1,0 +1,18 @@
+[user]
+    name = Vishwajeet Prasad
+    email =
+
+[core]
+    editor = vim --nofork
+
+[init]
+    defaultBranch = main
+
+[color]
+    ui = auto
+
+[credential]
+    helper =
+
+[include]
+    path =
