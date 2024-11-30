@@ -1,0 +1,462 @@
+{
+  "general_settings": {
+    "betaFeatures": false,
+    "legacyMode": false,
+    "showMoreActionsButton": false,
+    "silentOpen": true
+  },
+  "highlighter_settings": {
+    "alwaysShowHighlights": true,
+    "highlightBehavior": "replace-content",
+    "highlighterEnabled": true
+  },
+  "interpreter_settings": {
+    "anthropicApiKey": "",
+    "defaultPromptContext": "{{fullHtml|strip_tags:(\"script,h1,h2,h3,h4,h5,h6,meta,a,ol,ul,li,p,em,strong,i,b,img,video,audio,math,tablecite,strong,td,th,tr,caption,u\")|strip_attr:(\"alt,src,href,id,content,property,name,datetime,title\")}}",
+    "interpreterAutoRun": true,
+    "interpreterEnabled": false,
+    "interpreterModel": "gpt-4o-mini",
+    "models": [
+      {
+        "baseUrl": "https://api.openai.com/v1/chat/completions",
+        "enabled": true,
+        "id": "gpt-4o-mini",
+        "name": "GPT-4o Mini",
+        "provider": "OpenAI",
+        "providerId": "gpt-4o-mini"
+      },
+      {
+        "baseUrl": "https://api.openai.com/v1/chat/completions",
+        "enabled": true,
+        "id": "gpt-4o",
+        "name": "GPT-4o",
+        "provider": "OpenAI",
+        "providerId": "gpt-4o"
+      },
+      {
+        "baseUrl": "https://api.openai.com/v1/chat/completions",
+        "enabled": true,
+        "id": "gpt-o1-mini",
+        "name": "GPT-o1 Mini",
+        "provider": "OpenAI",
+        "providerId": "gpt-o1-mini"
+      },
+      {
+        "baseUrl": "https://api.anthropic.com/v1/messages",
+        "enabled": true,
+        "id": "claude-3-5-sonnet-20240620",
+        "name": "Claude 3.5 Sonnet",
+        "provider": "Anthropic",
+        "providerId": "claude-3-5-sonnet-20240620"
+      },
+      {
+        "baseUrl": "https://api.anthropic.com/v1/messages",
+        "enabled": true,
+        "id": "claude-3-haiku-20240307",
+        "name": "Claude 3 Haiku",
+        "provider": "Anthropic",
+        "providerId": "claude-3-haiku-20240307"
+      },
+      {
+        "baseUrl": "https://api.anthropic.com/v1/messages",
+        "enabled": true,
+        "id": "claude-3-opus-20240229",
+        "name": "Claude 3 Opus",
+        "provider": "Anthropic",
+        "providerId": "claude-3-opus-20240229"
+      },
+      {
+        "apiKey": "AIzaSyB3AhydyX5yKaSWlMQvIMcz6CKPwrD4rWc",
+        "baseUrl": "https://generativelanguage.googleapis.com/v1beta/models",
+        "enabled": true,
+        "id": "1732987351667",
+        "name": "Gemini 1.5 Flash",
+        "provider": "Google",
+        "providerId": "gemini-1.5-flash:generateContent"
+      }
+    ],
+    "openaiApiKey": ""
+  },
+  "property_types": [
+    {
+      "defaultValue": "{{title}}",
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{url}}",
+      "name": "source",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{author|split:\", \"|wikilink|join}}",
+      "name": "author",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "{{published}}",
+      "name": "published",
+      "type": "date"
+    },
+    {
+      "defaultValue": "{{description}}",
+      "name": "description",
+      "type": "text"
+    },
+    {
+      "defaultValue": "clippings",
+      "name": "tags",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "{{time}}",
+      "name": "saved",
+      "type": "datetime"
+    }
+  ],
+  "stats": {
+    "addToObsidian": 1,
+    "copyToClipboard": 0,
+    "saveFile": 0,
+    "share": 0
+  },
+  "template_17302276162939vwsicfyn": {
+    "id": "17302276162939vwsicfyn",
+    "name": "Default",
+    "behavior": "create",
+    "noteNameFormat": "{{time}}",
+    "path": "clippings",
+    "noteContentFormat": "# {{title}}\n\n{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "1730227616293xlmpcg0rd",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293ftmf03ced",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293pmv77mkzf",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1730227616293wip5vc3l5",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1730227616293nraj89vlo",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293bdjf1bdyb",
+        "name": "saved",
+        "value": "{{time}}",
+        "type": "datetime"
+      },
+      {
+        "id": "1730227616293arpcgixn9",
+        "name": "tags",
+        "value": "",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [],
+    "vault": "web-clippings"
+  },
+  "template_173064556514723pqkvgkb": {
+    "id": "173064556514723pqkvgkb",
+    "name": "Miscellaneous",
+    "behavior": "create",
+    "noteNameFormat": "{{time}}",
+    "path": "miscellaneous",
+    "noteContentFormat": "# {{title}}\n\n{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "1730227616293xlmpcg0rd",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293ftmf03ced",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293pmv77mkzf",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1730227616293wip5vc3l5",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1730227616293nraj89vlo",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293bdjf1bdyb",
+        "name": "saved",
+        "value": "{{time}}",
+        "type": "datetime"
+      },
+      {
+        "id": "1730227616293arpcgixn9",
+        "name": "tags",
+        "value": "miscellaneous 2024-w48",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [],
+    "vault": "web-clippings"
+  },
+  "template_1730645784716fqfm8krbp": {
+    "id": "1730645784716fqfm8krbp",
+    "name": "Technology or Science",
+    "behavior": "create",
+    "noteNameFormat": "{{time}}",
+    "path": "technology-or-science",
+    "noteContentFormat": "# {{title}}\n\n{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "1730227616293xlmpcg0rd",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293ftmf03ced",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293pmv77mkzf",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1730227616293wip5vc3l5",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1730227616293nraj89vlo",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293bdjf1bdyb",
+        "name": "saved",
+        "value": "{{time}}",
+        "type": "datetime"
+      },
+      {
+        "id": "1730227616293arpcgixn9",
+        "name": "tags",
+        "value": "technology-or-science 2024-w48",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [],
+    "vault": "web-clippings"
+  },
+  "template_1730645867612eadnjvrs2": {
+    "id": "1730645867612eadnjvrs2",
+    "name": "Programming or Software Engineering",
+    "behavior": "create",
+    "noteNameFormat": "{{time}}",
+    "path": "programming-or-software-engineering",
+    "noteContentFormat": "# {{title}}\n\n{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "1730227616293xlmpcg0rd",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293ftmf03ced",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293pmv77mkzf",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1730227616293wip5vc3l5",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1730227616293nraj89vlo",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293bdjf1bdyb",
+        "name": "saved",
+        "value": "{{time}}",
+        "type": "datetime"
+      },
+      {
+        "id": "1730227616293arpcgixn9",
+        "name": "tags",
+        "value": "programming-or-software-engineering 2024-w48",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [],
+    "vault": "web-clippings"
+  },
+  "template_17306466766363o9fgm2yd": {
+    "id": "17306466766363o9fgm2yd",
+    "name": "Business or Product",
+    "behavior": "create",
+    "noteNameFormat": "{{time}}",
+    "path": "business-or-product",
+    "noteContentFormat": "# {{title}}\n\n{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "1730227616293xlmpcg0rd",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293ftmf03ced",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293pmv77mkzf",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1730227616293wip5vc3l5",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1730227616293nraj89vlo",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293bdjf1bdyb",
+        "name": "saved",
+        "value": "{{time}}",
+        "type": "datetime"
+      },
+      {
+        "id": "1730227616293arpcgixn9",
+        "name": "tags",
+        "value": "business-or-product 2024-w48",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [],
+    "vault": "web-clippings"
+  },
+  "template_17306467305359puse2uux": {
+    "id": "17306467305359puse2uux",
+    "name": "Finance or Economics",
+    "behavior": "create",
+    "noteNameFormat": "{{time}}",
+    "path": "finance-or-economics",
+    "noteContentFormat": "# {{title}}\n\n{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "1730227616293xlmpcg0rd",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293ftmf03ced",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293pmv77mkzf",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1730227616293wip5vc3l5",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1730227616293nraj89vlo",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293bdjf1bdyb",
+        "name": "saved",
+        "value": "{{time}}",
+        "type": "datetime"
+      },
+      {
+        "id": "1730227616293arpcgixn9",
+        "name": "tags",
+        "value": "finance-or-economics 2024-w48",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [],
+    "vault": "web-clippings"
+  },
+  "template_list": [
+    "17302276162939vwsicfyn",
+    "173064556514723pqkvgkb",
+    "1730645784716fqfm8krbp",
+    "1730645867612eadnjvrs2",
+    "17306466766363o9fgm2yd",
+    "17306467305359puse2uux"
+  ],
+  "vaults": ["web-clippings", "notes"]
+}
