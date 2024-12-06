@@ -1,30 +1,52 @@
-" Set line numbers
+""""""""""
+" User Interface
+""""""""""
+" Show line numbers
 set number " Short: se nu
 
-
-"""
-" Vim user interface
-"""
-" Determines scroll offset
+" Set 7 lines to the cursor - when moving vertically using j/k
 set scrolloff=7 " Short: se so=7
 
-"""
-" Text, tab, and indent related
-"""
-" Convert tabs into spaces
-set expandtab " Short: se et
+""""""""""
+" Colors and Fonts
+""""""""""
+" Enable syntax highlighting
+syntax enable
 
-" Makes tab key smarter in relation to the context of the text
-set smarttab " Short: se sta
+""""""""""
+" Text, Tab, and Indent
+""""""""""
+" Use spaces instead of tabs
+set expandtab
 
-" Sets the number of spaces to use for each level of indentation
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
 set shiftwidth=4
+set tabstop=4
 
-" Defines the number of spaces that a tab character represents
-set tabstop=4 " Short se ts=4
-
-" Enables auto-indentation
+" Auto indent
 set autoindent " Short: se ai
-
-" Enables smart identation
+" Smart indent
 set smartindent " Short: se si
+
+""""""""""
+" Status Line
+""""""""""
+" Always show the status line
+set laststatus=2
+
+" Format the status line
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ PWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+
+""""""""""
+" Helper Functions
+""""""""""
+" Returns true if paste mode is enabled
+function! HasPaste()
+    if &paste
+        return 'PASTE MODE  '
+    endif
+    return ''
+endfunction
