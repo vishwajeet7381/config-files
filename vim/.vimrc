@@ -38,7 +38,7 @@ set smartindent " Short: se si
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ PWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ \ Line:\ %l\ \ Column:\ %c
 
 """"""""""
 " Helper Functions
