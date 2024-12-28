@@ -9,4 +9,12 @@ __pycache__/
 .python-version
 
 # VS Code files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 *.code-workspace
+
+# Local history for VS Code
+.history/
