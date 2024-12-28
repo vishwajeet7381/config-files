@@ -38,7 +38,7 @@ set smartindent " Short: se si
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ \ Line:\ %l\ \ Column:\ %c
+set statusline=%{HasPaste()}%F%m%r%h%w\ \ %<PWD:%{PWDRelativeToHome()}\ \ %=%l/%L\ Col:%c
 
 """"""""""
 " Helper Functions
@@ -49,4 +49,11 @@ function! HasPaste()
         return 'PASTE MODE  '
     endif
     return ''
+endfunction
+
+" Function to get cwd relative to home directory
+function! PWDRelativeToHome()
+  let l:cwd = getcwd()
+  let l:home = expand('~')
+  return substitute(l:cwd, '^' . l:home, '~', '')
 endfunction
