@@ -11,28 +11,50 @@
     "highlighterEnabled": true
   },
   "interpreter_settings": {
-    "defaultPromptContext": "",
+    "defaultPromptContext": "{{fullHtml|strip_tags:(\"script,h1,h2,h3,h4,h5,h6,meta,a,ol,ul,li,p,em,strong,i,b,img,video,audio,math,tablecite,strong,td,th,tr,caption,u\")|strip_attr:(\"alt,src,href,id,content,property,name,datetime,title\")}}",
     "interpreterAutoRun": false,
     "interpreterEnabled": true,
-    "interpreterModel": "gpt-4o-mini",
+    "interpreterModel": "1734259073644",
     "models": [
       {
         "enabled": true,
-        "id": "1733660728873",
+        "id": "1732987351667",
         "name": "Gemini 1.5 Flash",
-        "providerId": "1733660714048",
+        "providerId": "1734259021549",
         "providerModelId": "gemini-1.5-flash"
+      },
+      {
+        "enabled": true,
+        "id": "1734259060058",
+        "name": "Gemini 1.5 Flash-8B",
+        "providerId": "1734259021549",
+        "providerModelId": "gemini-1.5-flash-8b"
+      },
+      {
+        "enabled": true,
+        "id": "1734259073644",
+        "name": "Gemini 2.0 Flash Experimental",
+        "providerId": "1734259021549",
+        "providerModelId": "gemini-2.0-flash-exp"
+      },
+      {
+        "enabled": true,
+        "id": "1734259902919",
+        "name": "Gemini 1.5 Pro",
+        "providerId": "1734259021549",
+        "providerModelId": "gemini-1.5-pro"
       }
     ],
     "providers": [
       {
         "apiKey": "",
         "baseUrl": "https://generativelanguage.googleapis.com/v1beta/chat/completions",
-        "id": "1733660714048",
+        "id": "1734259021549",
         "name": "Google Gemini"
       }
     ]
   },
+  "migrationVersion": 1,
   "property_types": [
     {
       "defaultValue": "{{title}}",
@@ -45,7 +67,7 @@
       "type": "text"
     },
     {
-      "defaultValue": "{{author|split:\", \"|wikilink|join}}",
+      "defaultValue": "{{author}}",
       "name": "author",
       "type": "multitext"
     },
@@ -67,62 +89,62 @@
     {
       "defaultValue": "{{time}}",
       "name": "saved",
-      "type": "text"
+      "type": "datetime"
     }
   ],
   "stats": {
-    "addToObsidian": 0,
+    "addToObsidian": 51,
     "copyToClipboard": 0,
     "saveFile": 0,
     "share": 0
   },
-  "template_1733660686439zk7n9ku5f": {
-    "id": "1733660686439zk7n9ku5f",
+  "template_17302276162939vwsicfyn": {
+    "id": "17302276162939vwsicfyn",
     "name": "Default",
     "behavior": "create",
     "noteNameFormat": "{{time}}",
     "path": "clippings",
-    "noteContentFormat": "# {{title}}\n\n## Summary\n\n{{\"a summary of the page\"|blockquote}}\n\n{{content}}",
+    "noteContentFormat": "# {{title}}\n\n## Summary\n\n{{\"As a professional summarizer, create a concise and comprehensive summary of the provided text, be it an article, post, conversation, or passage, while adhering to these guidelines: 1) Craft a summary that is detailed, thorough, and in-depth, while maintaining clarity and conciseness. 2) Incorporate main ideas and essential information, eliminating extraneous language and focusing on critical aspects. 3) Use markdown formatting.\"|blockquote}}\n\n{{content}}",
     "context": "",
     "properties": [
       {
-        "id": "17336606864397dd0quozn",
+        "id": "1730227616293xlmpcg0rd",
         "name": "title",
         "value": "{{title}}",
         "type": "text"
       },
       {
-        "id": "1733660686439bkce3pj1j",
+        "id": "1730227616293ftmf03ced",
         "name": "source",
         "value": "{{url}}",
         "type": "text"
       },
       {
-        "id": "17336606864398bnrp0k76",
+        "id": "1730227616293pmv77mkzf",
         "name": "author",
-        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "value": "{{author}}",
         "type": "multitext"
       },
       {
-        "id": "1733660686439camynxxh7",
+        "id": "1730227616293wip5vc3l5",
         "name": "published",
         "value": "{{published}}",
         "type": "date"
       },
       {
-        "id": "1733660686439vxhpt4p0q",
+        "id": "1730227616293nraj89vlo",
         "name": "description",
         "value": "{{description}}",
         "type": "text"
       },
       {
-        "id": "1733660686439eakmdg1vj",
+        "id": "1730227616293bdjf1bdyb",
         "name": "saved",
         "value": "{{time}}",
-        "type": "text"
+        "type": "datetime"
       },
       {
-        "id": "1733660686439332w31c8p",
+        "id": "1730227616293arpcgixn9",
         "name": "tags",
         "value": "",
         "type": "multitext"
@@ -131,275 +153,330 @@
     "triggers": [],
     "vault": "web-clippings"
   },
-  "template_1733682030862mts7hds5u": {
-    "id": "1733682030862mts7hds5u",
+  "template_173064556514723pqkvgkb": {
+    "id": "173064556514723pqkvgkb",
     "name": "Miscellaneous",
     "behavior": "create",
     "noteNameFormat": "{{time}}",
     "path": "miscellaneous",
-    "noteContentFormat": "# {{title}}\n\n## Summary\n\n{{\"a summary of the page\"|blockquote}}\n\n{{content}}",
+    "noteContentFormat": "# {{title}}\n\n## Summary\n\n{{\"As a professional summarizer, create a concise and comprehensive summary of the provided text, be it an article, post, conversation, or passage, while adhering to these guidelines: 1) Craft a summary that is detailed, thorough, and in-depth, while maintaining clarity and conciseness. 2) Incorporate main ideas and essential information, eliminating extraneous language and focusing on critical aspects. 3) Use markdown formatting.\"|blockquote}}\n\n{{content}}",
     "context": "",
     "properties": [
       {
-        "id": "17336606864397dd0quozn",
+        "id": "1730227616293xlmpcg0rd",
         "name": "title",
         "value": "{{title}}",
         "type": "text"
       },
       {
-        "id": "1733660686439bkce3pj1j",
+        "id": "1730227616293ftmf03ced",
         "name": "source",
         "value": "{{url}}",
         "type": "text"
       },
       {
-        "id": "17336606864398bnrp0k76",
+        "id": "1730227616293pmv77mkzf",
         "name": "author",
-        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "value": "{{author}}",
         "type": "multitext"
       },
       {
-        "id": "1733660686439camynxxh7",
+        "id": "1730227616293wip5vc3l5",
         "name": "published",
         "value": "{{published}}",
         "type": "date"
       },
       {
-        "id": "1733660686439vxhpt4p0q",
+        "id": "1730227616293nraj89vlo",
         "name": "description",
         "value": "{{description}}",
         "type": "text"
       },
       {
-        "id": "1733660686439eakmdg1vj",
+        "id": "1730227616293bdjf1bdyb",
         "name": "saved",
         "value": "{{time}}",
-        "type": "text"
+        "type": "datetime"
       },
       {
-        "id": "1733660686439332w31c8p",
+        "id": "1730227616293arpcgixn9",
         "name": "tags",
-        "value": "miscellaneous 2024-w49",
+        "value": "miscellaneous 2025-w06",
         "type": "multitext"
       }
     ],
     "triggers": [],
     "vault": "web-clippings"
   },
-  "template_1733682154139t97ffjhul": {
-    "id": "1733682154139t97ffjhul",
+  "template_1730645784716fqfm8krbp": {
+    "id": "1730645784716fqfm8krbp",
     "name": "Technology or Science",
     "behavior": "create",
     "noteNameFormat": "{{time}}",
     "path": "technology-or-science",
-    "noteContentFormat": "# {{title}}\n\n## Summary\n\n{{\"a summary of the page\"|blockquote}}\n\n{{content}}",
+    "noteContentFormat": "# {{title}}\n\n## Summary\n\n{{\"As a professional summarizer, create a concise and comprehensive summary of the provided text, be it an article, post, conversation, or passage, while adhering to these guidelines: 1) Craft a summary that is detailed, thorough, and in-depth, while maintaining clarity and conciseness. 2) Incorporate main ideas and essential information, eliminating extraneous language and focusing on critical aspects. 3) Use markdown formatting.\"|blockquote}}\n\n{{content}}",
     "context": "",
     "properties": [
       {
-        "id": "17336606864397dd0quozn",
+        "id": "1730227616293xlmpcg0rd",
         "name": "title",
         "value": "{{title}}",
         "type": "text"
       },
       {
-        "id": "1733660686439bkce3pj1j",
+        "id": "1730227616293ftmf03ced",
         "name": "source",
         "value": "{{url}}",
         "type": "text"
       },
       {
-        "id": "17336606864398bnrp0k76",
+        "id": "1730227616293pmv77mkzf",
         "name": "author",
-        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "value": "{{author}}",
         "type": "multitext"
       },
       {
-        "id": "1733660686439camynxxh7",
+        "id": "1730227616293wip5vc3l5",
         "name": "published",
         "value": "{{published}}",
         "type": "date"
       },
       {
-        "id": "1733660686439vxhpt4p0q",
+        "id": "1730227616293nraj89vlo",
         "name": "description",
         "value": "{{description}}",
         "type": "text"
       },
       {
-        "id": "1733660686439eakmdg1vj",
+        "id": "1730227616293bdjf1bdyb",
         "name": "saved",
         "value": "{{time}}",
-        "type": "text"
+        "type": "datetime"
       },
       {
-        "id": "1733660686439332w31c8p",
+        "id": "1730227616293arpcgixn9",
         "name": "tags",
-        "value": "technology-or-science 2024-w49",
+        "value": "technology-or-science 2025-w06",
         "type": "multitext"
       }
     ],
     "triggers": [],
     "vault": "web-clippings"
   },
-  "template_1733682229870kayy22e5s": {
-    "id": "1733682229870kayy22e5s",
+  "template_1730645867612eadnjvrs2": {
+    "id": "1730645867612eadnjvrs2",
     "name": "Programming or Software Engineering",
     "behavior": "create",
     "noteNameFormat": "{{time}}",
     "path": "programming-or-software-engineering",
-    "noteContentFormat": "# {{title}}\n\n## Summary\n\n{{\"a summary of the page\"|blockquote}}\n\n{{content}}",
+    "noteContentFormat": "# {{title}}\n\n## Summary\n\n{{\"As a professional summarizer, create a concise and comprehensive summary of the provided text, be it an article, post, conversation, or passage, while adhering to these guidelines: 1) Craft a summary that is detailed, thorough, and in-depth, while maintaining clarity and conciseness. 2) Incorporate main ideas and essential information, eliminating extraneous language and focusing on critical aspects. 3) Use markdown formatting.\"|blockquote}}\n\n{{content}}",
     "context": "",
     "properties": [
       {
-        "id": "17336606864397dd0quozn",
+        "id": "1730227616293xlmpcg0rd",
         "name": "title",
         "value": "{{title}}",
         "type": "text"
       },
       {
-        "id": "1733660686439bkce3pj1j",
+        "id": "1730227616293ftmf03ced",
         "name": "source",
         "value": "{{url}}",
         "type": "text"
       },
       {
-        "id": "17336606864398bnrp0k76",
+        "id": "1730227616293pmv77mkzf",
         "name": "author",
-        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "value": "{{author}}",
         "type": "multitext"
       },
       {
-        "id": "1733660686439camynxxh7",
+        "id": "1730227616293wip5vc3l5",
         "name": "published",
         "value": "{{published}}",
         "type": "date"
       },
       {
-        "id": "1733660686439vxhpt4p0q",
+        "id": "1730227616293nraj89vlo",
         "name": "description",
         "value": "{{description}}",
         "type": "text"
       },
       {
-        "id": "1733660686439eakmdg1vj",
+        "id": "1730227616293bdjf1bdyb",
         "name": "saved",
         "value": "{{time}}",
-        "type": "text"
+        "type": "datetime"
       },
       {
-        "id": "1733660686439332w31c8p",
+        "id": "1730227616293arpcgixn9",
         "name": "tags",
-        "value": "programming-or-software-engineering 2024-w49",
+        "value": "programming-or-software-engineering 2025-w06",
         "type": "multitext"
       }
     ],
     "triggers": [],
     "vault": "web-clippings"
   },
-  "template_1733682274023i8u9vhd2r": {
-    "id": "1733682274023i8u9vhd2r",
+  "template_17306466766363o9fgm2yd": {
+    "id": "17306466766363o9fgm2yd",
     "name": "Business or Product",
     "behavior": "create",
     "noteNameFormat": "{{time}}",
     "path": "business-or-product",
-    "noteContentFormat": "# {{title}}\n\n## Summary\n\n{{\"a summary of the page\"|blockquote}}\n\n{{content}}",
+    "noteContentFormat": "# {{title}}\n\n## Summary\n\n{{\"As a professional summarizer, create a concise and comprehensive summary of the provided text, be it an article, post, conversation, or passage, while adhering to these guidelines: 1) Craft a summary that is detailed, thorough, and in-depth, while maintaining clarity and conciseness. 2) Incorporate main ideas and essential information, eliminating extraneous language and focusing on critical aspects. 3) Use markdown formatting.\"|blockquote}}\n\n{{content}}",
     "context": "",
     "properties": [
       {
-        "id": "17336606864397dd0quozn",
+        "id": "1730227616293xlmpcg0rd",
         "name": "title",
         "value": "{{title}}",
         "type": "text"
       },
       {
-        "id": "1733660686439bkce3pj1j",
+        "id": "1730227616293ftmf03ced",
         "name": "source",
         "value": "{{url}}",
         "type": "text"
       },
       {
-        "id": "17336606864398bnrp0k76",
+        "id": "1730227616293pmv77mkzf",
         "name": "author",
-        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "value": "{{author}}",
         "type": "multitext"
       },
       {
-        "id": "1733660686439camynxxh7",
+        "id": "1730227616293wip5vc3l5",
         "name": "published",
         "value": "{{published}}",
         "type": "date"
       },
       {
-        "id": "1733660686439vxhpt4p0q",
+        "id": "1730227616293nraj89vlo",
         "name": "description",
         "value": "{{description}}",
         "type": "text"
       },
       {
-        "id": "1733660686439eakmdg1vj",
+        "id": "1730227616293bdjf1bdyb",
         "name": "saved",
         "value": "{{time}}",
-        "type": "text"
+        "type": "datetime"
       },
       {
-        "id": "1733660686439332w31c8p",
+        "id": "1730227616293arpcgixn9",
         "name": "tags",
-        "value": "business-or-product 2024-w49",
+        "value": "business-or-product 2025-w06",
         "type": "multitext"
       }
     ],
     "triggers": [],
     "vault": "web-clippings"
   },
-  "template_1733682335831hvdpc1aq9": {
-    "id": "1733682335831hvdpc1aq9",
+  "template_17306467305359puse2uux": {
+    "id": "17306467305359puse2uux",
     "name": "Finance or Economics",
     "behavior": "create",
     "noteNameFormat": "{{time}}",
     "path": "finance-or-economics",
-    "noteContentFormat": "# {{title}}\n\n## Summary\n\n{{\"a summary of the page\"|blockquote}}\n\n{{content}}",
+    "noteContentFormat": "# {{title}}\n\n## Summary\n\n{{\"As a professional summarizer, create a concise and comprehensive summary of the provided text, be it an article, post, conversation, or passage, while adhering to these guidelines: 1) Craft a summary that is detailed, thorough, and in-depth, while maintaining clarity and conciseness. 2) Incorporate main ideas and essential information, eliminating extraneous language and focusing on critical aspects. 3) Use markdown formatting.\"|blockquote}}\n\n{{content}}",
     "context": "",
     "properties": [
       {
-        "id": "17336606864397dd0quozn",
+        "id": "1730227616293xlmpcg0rd",
         "name": "title",
         "value": "{{title}}",
         "type": "text"
       },
       {
-        "id": "1733660686439bkce3pj1j",
+        "id": "1730227616293ftmf03ced",
         "name": "source",
         "value": "{{url}}",
         "type": "text"
       },
       {
-        "id": "17336606864398bnrp0k76",
+        "id": "1730227616293pmv77mkzf",
         "name": "author",
-        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "value": "{{author}}",
         "type": "multitext"
       },
       {
-        "id": "1733660686439camynxxh7",
+        "id": "1730227616293wip5vc3l5",
         "name": "published",
         "value": "{{published}}",
         "type": "date"
       },
       {
-        "id": "1733660686439vxhpt4p0q",
+        "id": "1730227616293nraj89vlo",
         "name": "description",
         "value": "{{description}}",
         "type": "text"
       },
       {
-        "id": "1733660686439eakmdg1vj",
+        "id": "1730227616293bdjf1bdyb",
         "name": "saved",
         "value": "{{time}}",
+        "type": "datetime"
+      },
+      {
+        "id": "1730227616293arpcgixn9",
+        "name": "tags",
+        "value": "finance-or-economics 2025-w06",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [],
+    "vault": "web-clippings"
+  },
+  "template_1735051509716os4cb1p5j": {
+    "id": "1735051509716os4cb1p5j",
+    "name": "LLM Prompts",
+    "behavior": "create",
+    "noteNameFormat": "{{time}}",
+    "path": "clippings",
+    "noteContentFormat": "{{\"What category should this belongs to, (1) Miscellaneous, (2) Technology or Science, (3) Programming or Software Engineering, (4) Business or Product, (5) Finance or Economics\"}}\n\n# {{title}}\n\n## Summary\n\n{{\"As a professional summarizer, create a concise and comprehensive summary of the provided text, be it an article, post, conversation, or passage, while adhering to these guidelines: 1) Craft a summary that is detailed, thorough, and in-depth, while maintaining clarity and conciseness. 2) Incorporate main ideas and essential information, eliminating extraneous language and focusing on critical aspects. 3) Use markdown formatting.\"|blockquote}}\n\n{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "1730227616293xlmpcg0rd",
+        "name": "title",
+        "value": "{{title}}",
         "type": "text"
       },
       {
-        "id": "1733660686439332w31c8p",
+        "id": "1730227616293ftmf03ced",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293pmv77mkzf",
+        "name": "author",
+        "value": "{{\\\"author(s) separated by comma\\\"}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1730227616293wip5vc3l5",
+        "name": "published",
+        "value": "{{\\\"published date in the format yyyy-mm-dd\\\"}}",
+        "type": "date"
+      },
+      {
+        "id": "1730227616293nraj89vlo",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1730227616293bdjf1bdyb",
+        "name": "saved",
+        "value": "{{time}}",
+        "type": "datetime"
+      },
+      {
+        "id": "1730227616293arpcgixn9",
         "name": "tags",
-        "value": "finance-or-economics 2024-w49",
+        "value": "",
         "type": "multitext"
       }
     ],
@@ -407,12 +484,13 @@
     "vault": "web-clippings"
   },
   "template_list": [
-    "1733660686439zk7n9ku5f",
-    "1733682030862mts7hds5u",
-    "1733682154139t97ffjhul",
-    "1733682229870kayy22e5s",
-    "1733682274023i8u9vhd2r",
-    "1733682335831hvdpc1aq9"
+    "17302276162939vwsicfyn",
+    "173064556514723pqkvgkb",
+    "1730645784716fqfm8krbp",
+    "1730645867612eadnjvrs2",
+    "17306466766363o9fgm2yd",
+    "17306467305359puse2uux",
+    "1735051509716os4cb1p5j"
   ],
   "vaults": [
     "web-clippings",
